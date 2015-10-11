@@ -87,6 +87,15 @@ namespace WiringPi
             GPIOClock = 3
         }
     }
+    
+    public class PWM
+    {
+        public enum PWMMode
+        {
+            PWMModeMS = 0,
+            PWMModeBal = 1
+        }
+    }
 
     /// <summary>
     /// Provides use of the Timing functions such as delays
