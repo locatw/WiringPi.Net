@@ -48,35 +48,35 @@ namespace WiringPi
     /// </summary>
     public class GPIO
     {
-        [DllImport("libwiringPi.so", EntryPoint = "pinModeGpio")]           //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "pinMode")]           //Uses Gpio pin numbers
         public static extern void pinMode(int pin, int mode);
 
-        [DllImport("libwiringPi.so", EntryPoint = "digitalWriteGpio")]      //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "digitalWrite")]      //Uses Gpio pin numbers
         public static extern void digitalWrite(int pin, int value);
 
-        [DllImport("libwiringPi.so", EntryPoint = "digitalWriteByteGpio")]      //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "digitalWriteByte")]      //Uses Gpio pin numbers
         public static extern void digitalWriteByte(int value);
 
-        [DllImport("libwiringPi.so", EntryPoint = "digitalReadGpio")]           //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "digitalRead")]           //Uses Gpio pin numbers
         public static extern int digitalRead(int pin);
 
-        [DllImport("libwiringPi.so", EntryPoint = "pullUpDnControlGpio")]         //Uses Gpio pin numbers  
+        [DllImport("libwiringPi.so", EntryPoint = "pullUpDnControl")]         //Uses Gpio pin numbers  
         public static extern void pullUpDnControl(int pin, int pud);
 
         //This pwm mode cannot be used when using GpioSys mode!!
-        [DllImport("libwiringPi.so", EntryPoint = "pwmWriteGpio")]              //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "pwmWrite")]              //Uses Gpio pin numbers
         public static extern void pwmWrite(int pin, int value);
 
-        [DllImport("libwiringPi.so", EntryPoint = "pwmSetModeGpio")]             //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "pwmSetMode")]             //Uses Gpio pin numbers
         public static extern void pwmSetMode(int mode);
 
-        [DllImport("libwiringPi.so", EntryPoint = "pwmSetRangeGpio")]             //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "pwmSetRange")]             //Uses Gpio pin numbers
         public static extern void pwmSetRange(uint range);
 
-        [DllImport("libwiringPi.so", EntryPoint = "pwmSetClockGpio")]             //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "pwmSetClock")]             //Uses Gpio pin numbers
         public static extern void pwmSetClock(int divisor);
 
-        [DllImport("libwiringPi.so", EntryPoint = "gpioClockSetGpio")]              //Uses Gpio pin numbers
+        [DllImport("libwiringPi.so", EntryPoint = "gpioClockSet")]              //Uses Gpio pin numbers
         public static extern void ClockSetGpio(int pin, int freq);
 
         public enum GPIOpinmode
